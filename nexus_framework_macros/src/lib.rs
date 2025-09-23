@@ -196,6 +196,9 @@ pub fn service_impl(_attr: TokenStream, item: TokenStream) -> TokenStream {
     // Process each method in the impl block
     for item in &mut item_impl.items {
         if let ImplItem::Fn(method) = item {
+            // Force all methods to be public so they can be used outside the module
+            method.vis = syn::parse_quote!(pub);
+
             // Skip the `new` method - we don't want to add tracing to it
             let is_new_method = method.sig.ident == "new";
 
