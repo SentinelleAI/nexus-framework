@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "nexus_framework",
+    "nexus_framework_macros",
+]
+
+resolver = "3"

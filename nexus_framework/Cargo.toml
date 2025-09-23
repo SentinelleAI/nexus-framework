@@ -1,0 +1,26 @@
+[package]
+name = "nexus_framework"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Local dependency on our macros
+nexus_framework_macros = { path = "../nexus_framework_macros" }
+
+# Public dependencies that our framework relies on
+axum = "0.7"
+tokio = { version = "1.0", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+inventory = "0.3"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "chrono"] }
+tower-http = { version = "0.5", features = ["trace"] }
+chrono = { version = "0.4", features = ["serde"] }
+colored = "2.0"
+uuid = { version = "1.8", features = ["v4"] }
+sysinfo = "0.29"
+http-body-util = "0.1"
+hyper = "1"
+bytes = "1.10.1"
+tokio-cron-scheduler = "0.10.1"

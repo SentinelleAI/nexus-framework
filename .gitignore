@@ -1,0 +1,5 @@
+**/target
+
+# Ignore IDE project files
+**/.idea
+**/.vscode
