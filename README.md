@@ -8,7 +8,7 @@ To start using the Nexus Framework, you need to have Rust and Cargo installed on
 
 ```toml
 [dependencies]
-nexus_framework = { path = "ssh://git@github.com/AymericChaverot/nexus-framework.git" }
+nexus_framework = { path = "ssh://git@github.com/SentinelleAI/nexus-framework.git" }
 ```
 
 ## Core Concepts
