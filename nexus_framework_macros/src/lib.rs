@@ -206,9 +206,11 @@ pub fn service_impl(_attr: TokenStream, item: TokenStream) -> TokenStream {
                 let original_sig = &method.sig;
 
                 // Create a new method with tracing added
+                let method_vis = &method.vis;
+                let method_defaultness = &method.defaultness;
                 let traced_method: ImplItem = syn::parse_quote! {
                     #(#original_attrs)*
-                    #original_sig {
+                    #method_vis #method_defaultness #original_sig {
                         let _span = nexus_framework::prelude::tracing::info_span!(stringify!(#method_name)).entered();
                         #original_block
                     }
