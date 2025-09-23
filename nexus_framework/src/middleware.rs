@@ -59,7 +59,7 @@ pub async fn request_logging(mut req: Request<Body>, next: Next) -> impl IntoRes
     let _enter = span.enter();
     let duration = start.elapsed();
     let status = response.status();
-    let status_colored = match status.as_u16() {
+    /*let status_colored = match status.as_u16() {
         200..=299 => status.to_string().green(),
         400..=599 => status.to_string().red(),
         _ => status.to_string().yellow(),
@@ -73,14 +73,14 @@ pub async fn request_logging(mut req: Request<Body>, next: Next) -> impl IntoRes
         "HEAD" => "HEAD".green().bold(),
         "OPTIONS" => "OPTIONS".bright_black().bold(),
         _ => "UNKNWN".normal(),
-    };
+    };*/
 
     // Log the summary for every request
     tracing::info!(
         "{} {} -> {} ({:?})",
-        method_colored,
+        method,
         uri,
-        status_colored,
+        status,
         duration
     );
 
