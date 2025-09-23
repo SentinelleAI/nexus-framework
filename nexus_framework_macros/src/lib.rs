@@ -592,7 +592,7 @@ pub fn nexus_app(args: TokenStream, item: TokenStream) -> TokenStream {
                 if let Some((method, path)) = route_str.split_once(' ') {
                     let padded_method = format!("{:<7}", method);
                     let colored_method = match method {
-                        "GET" => padded_method.green(),
+                        "GET" => padded_method,
                         "POST" => padded_method.yellow().bold(),
                         "PUT" => padded_method.blue().bold(),
                         "PATCH" => padded_method.magenta().bold(),
