@@ -591,8 +591,8 @@ pub fn nexus_app(args: TokenStream, item: TokenStream) -> TokenStream {
             for route_str in factory.routes {
                 if let Some((method, path)) = route_str.split_once(' ') {
                     let padded_method = format!("{:<7}", method);
-                    let colored_method = match method {
-                        "GET" => padded_method.green(),
+                    /*let colored_method = match method {
+                        "GET" => padded_method.green().bold(),
                         "POST" => padded_method.yellow().bold(),
                         "PUT" => padded_method.blue().bold(),
                         "PATCH" => padded_method.magenta().bold(),
@@ -600,7 +600,8 @@ pub fn nexus_app(args: TokenStream, item: TokenStream) -> TokenStream {
                         "HEAD" => padded_method.green().bold(),
                         "OPTIONS" => padded_method.bright_black().bold(),
                         _ => padded_method.normal(),
-                    };
+                    };*/
+                    let colored_method = padded_method; // Disable colors for simplicity
                     tracing::info!("{} -> {}", colored_method, path);
                 } else {
                     tracing::info!("        -> {}", route_str);
