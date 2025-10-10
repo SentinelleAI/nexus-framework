@@ -631,7 +631,7 @@ pub fn nexus_app(args: TokenStream, item: TokenStream) -> TokenStream {
 
         // Start the HTTP server
         tracing::info!("🔌 Preparing HTTP server...");
-        let addr = std::net::SocketAddr::from(([127, 0, 0, 1], #port));
+        let addr = std::net::SocketAddr::from(([0, 0, 0, 0], #port));
         tracing::info!("🔒 Binding to address: {}", addr);
         let listener = tokio::net::TcpListener::bind(addr).await.unwrap();
         tracing::info!(listen_addr = %listener.local_addr().unwrap(), "📡 Server listening");
