@@ -748,7 +748,7 @@ dependencies = [
 
 [[package]]
 name = "nexus_framework"
-version = "0.1.1"
+version = "0.2.0"
 dependencies = [
  "axum",
  "bytes",
@@ -773,7 +773,7 @@ dependencies = [
 
 [[package]]
 name = "nexus_framework_macros"
-version = "0.1.1"
+version = "0.2.0"
 dependencies = [
  "quote",
  "syn 2.0.106",
