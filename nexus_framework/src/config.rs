@@ -30,7 +30,7 @@ use serde::Deserialize;
 use std::path::Path;
 
 /// Top-level application configuration.
-#[derive(Debug, Clone, Deserialize)]
+#[derive(Debug, Clone, Default, Deserialize)]
 #[serde(default)]
 pub struct NexusConfig {
     /// Server-related settings (host, port).
@@ -61,16 +61,6 @@ pub struct AppConfig {
     pub name: String,
     /// The environment (default: value of `NFW_ENV` or `"development"`).
     pub env: String,
-}
-
-impl Default for NexusConfig {
-    fn default() -> Self {
-        Self {
-            server: ServerConfig::default(),
-            app: AppConfig::default(),
-            raw: None,
-        }
-    }
 }
 
 impl Default for ServerConfig {
