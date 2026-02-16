@@ -20,7 +20,7 @@ In your `Cargo.toml`:
 
 ```toml
 [dependencies]
-nexus_framework = { git = "ssh://git@github.com/SentinelleAI/nexus-framework.git" }
+nexus_framework = { git = "https://github.com/SentinelleAI/nexus-framework.git" }
 ```
 
 ## Write Your Application
