@@ -2,7 +2,6 @@
 name = "nexus_framework"
 version = "0.2.0"
 edition = "2021"
-rust-version = "1.75"
 description = "A lightweight, modular web framework for Rust built on Axum"
 license = "MIT"
 repository = "https://github.com/SentinelleAI/nexus-framework"

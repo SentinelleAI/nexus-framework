@@ -54,7 +54,8 @@ pub type GuardResult = Result<Request<Body>, AppError>;
 ///     Ok(req)
 /// }
 /// ```
-pub type GuardFn = fn(Request<Body>) -> std::pin::Pin<Box<dyn std::future::Future<Output = GuardResult> + Send>>;
+pub type GuardFn =
+    fn(Request<Body>) -> std::pin::Pin<Box<dyn std::future::Future<Output = GuardResult> + Send>>;
 
 /// Middleware adapter that wraps a guard function into an Axum middleware.
 ///
