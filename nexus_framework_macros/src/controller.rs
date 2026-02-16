@@ -126,7 +126,7 @@ pub fn controller_macro(args: TokenStream, item: TokenStream) -> TokenStream {
             if let Some(route_attr) = method
                 .attrs
                 .iter()
-                .find(|a| a.path().get_ident().map_or(false, |i| i == "route"))
+                .find(|a| a.path().get_ident().is_some_and(|i| i == "route"))
             {
                 let route_args: RouteArgs = match route_attr.parse_args() {
                     Ok(args) => args,
