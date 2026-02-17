@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE.md)
 [![Rust](https://img.shields.io/badge/Rust-1.75%2B-orange.svg)](https://www.rust-lang.org/)
-[![Version](https://img.shields.io/badge/version-0.1.1-green.svg)](Cargo.toml)
+[![Version](https://img.shields.io/badge/version-0.2.0-green.svg)](Cargo.toml)
 
 > A lightweight, modular web framework for Rust built on [Axum](https://github.com/tokio-rs/axum) — designed for high-performance, scalable web applications and APIs.
 
