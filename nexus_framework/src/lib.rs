@@ -22,7 +22,7 @@
 //! ```rust
 //! use nexus_framework::prelude::*;
 //!
-//! #[service]
+//! #[service(inject)]
 //! pub struct UserService;
 //!
 //! #[service_impl]
