@@ -1,5 +1,52 @@
-**/target
+# Build artifacts
+**/target/
+**/*.rs.bk
 
-# Ignore IDE project files
-**/.idea
-**/.vscode
+# Cargo lock for libraries (users generate their own)
+# Uncomment if this is an application, not a library
+# Cargo.lock
+
+# IDE and editor files
+**/.idea/
+**/.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Environment and secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Debug and profiling
+*.dSYM/
+*.su
+*.iml
+perf.data
+perf.data.old
+flamegraph.svg
+callgrind.out.*
+
+# Documentation build output
+/docs/_build/
+
+# Coverage
+*.profraw
+*.profdata
+lcov.info
+tarpaulin-report.html
+coverage/

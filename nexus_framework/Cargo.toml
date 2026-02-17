@@ -1,7 +1,12 @@
 [package]
 name = "nexus_framework"
-version = "0.1.1"
+version = "0.2.0"
 edition = "2021"
+description = "A lightweight, modular web framework for Rust built on Axum"
+license = "MIT"
+repository = "https://github.com/SentinelleAI/nexus-framework"
+keywords = ["web-framework", "axum", "dependency-injection", "api", "rest"]
+categories = ["web-programming::http-server"]
 
 [dependencies]
 # Local dependency on our macros
@@ -15,7 +20,7 @@ serde_json = "1.0"
 inventory = "0.3"
 tracing = "0.1"
 tracing-subscriber = { version = "0.3", features = ["env-filter", "chrono"] }
-tower-http = { version = "0.5", features = ["trace"] }
+tower-http = { version = "0.5", features = ["trace", "cors"] }
 chrono = { version = "0.4", features = ["serde"] }
 colored = "2.0"
 uuid = { version = "1.8", features = ["v4"] }
@@ -24,3 +29,5 @@ http-body-util = "0.1"
 hyper = "1"
 bytes = "1.10.1"
 tokio-cron-scheduler = "0.10.1"
+toml = "0.8"
+config = "0.14"
