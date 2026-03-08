@@ -1,21 +1,22 @@
-# 🌐 Nexus Framework
+# Nexus Framework
 
+[![CI](https://github.com/SentinelleAI/nexus-framework/actions/workflows/ci.yml/badge.svg)](https://github.com/SentinelleAI/nexus-framework/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE.md)
 [![Rust](https://img.shields.io/badge/Rust-1.75%2B-orange.svg)](https://www.rust-lang.org/)
 [![Version](https://img.shields.io/badge/version-0.2.0-green.svg)](Cargo.toml)
 
-> A lightweight, modular web framework for Rust built on [Axum](https://github.com/tokio-rs/axum) — designed for high-performance, scalable web applications and APIs.
+A lightweight, modular web framework for Rust built on [Axum](https://github.com/tokio-rs/axum) — designed for high-performance, scalable web applications and APIs.
 
 ---
 
-## ✨ Features
+## Features
 
 | Feature | Description |
 |---------|-------------|
 | **Dependency Injection** | Auto-discovery and type-safe injection with inter-service dependencies |
 | **Declarative API** | Simple attribute macros (`#[service]`, `#[controller]`, `#[route]`) |
 | **Route Guards** | Protect routes with custom async guard functions |
-| **Error Handling** | Centralized `AppError` with automatic JSON responses and error details |
+| **Error Handling** | Centralized `AppError` with automatic JSON responses and structured details |
 | **Configuration** | Layered config system: TOML files + environment variables |
 | **Scheduled Jobs** | Cron-based job scheduling with `#[scheduled]` |
 | **Request Logging** | Built-in colorized request/response middleware |
@@ -24,7 +25,7 @@
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Add the dependency
 
@@ -106,15 +107,9 @@ async fn main() {
 cargo run
 ```
 
-The framework starts and logs:
-- 🧩 Discovered services
-- 🎮 Registered controller routes with methods
-- 📡 Server listening address
-- ⚡ Startup time
-
 ---
 
-## 📖 Documentation
+## Documentation
 
 | Guide | Description |
 |-------|-------------|
@@ -129,7 +124,7 @@ The framework starts and logs:
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 nexus_framework/src/
@@ -157,7 +152,7 @@ nexus_framework_macros/src/
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 Create a `nexus.toml` at the root of your project:
 
@@ -183,7 +178,7 @@ Configuration is loaded in layers (each overrides the previous):
 
 ---
 
-## 🔥 Error Handling
+## Error Handling
 
 ```rust
 // Convenient constructors
@@ -219,7 +214,7 @@ All errors serialize to JSON:
 
 ---
 
-## 🛡️ Route Guards
+## Route Guards
 
 ```rust
 async fn admin_guard(req: axum::http::Request<axum::body::Body>) -> GuardResult {
@@ -238,7 +233,7 @@ async fn admin_action() -> impl IntoResponse {
 
 ---
 
-## 📅 Scheduled Jobs
+## Scheduled Jobs
 
 ```rust
 #[scheduled(cron = "0 */5 * * * *")]
